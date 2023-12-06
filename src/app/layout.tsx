@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 // Font files 
 // const myFont = localFont({
-//   src: '../../public/fonts/nexaText.zip',
+//   src: '../../public/fonts/nexa-text',
 //   display: 'swap',
 // })
 
