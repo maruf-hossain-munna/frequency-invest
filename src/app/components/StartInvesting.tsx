@@ -1,79 +1,53 @@
 import React from 'react';
-import one from '../../../public/images/one.png';
-import two from '../../../public/images/two.png';
-import three from '../../../public/images/three.png';
 import upperArrow from '../../../public/images/upperArrow.png';
 import lowerArrow from '../../../public/images/lowerArrow.png';
-import heroEffect2 from '../../../public/images/heroEffect2.png';
 import Image from 'next/image';
+import InvestCard from './InvestCard';
 
 const StartInvesting = () => {
     return (
-        <div className='bg-[#02060C] startInvestBg pt-40 pb-36 text-white'>
-            <Image 
-                src={heroEffect2}
-                alt='Background effect'
-                height={550}
-                className='heroEffect2'
-            />
-            
-            <h2 className='text-[48px] font-[950] text-center '>CÓMO EMPEZAR A INVERTIR</h2>
+        <div className='bg-[#02060C] startInvestBg pb-36 lg:pt-80 pt-20 text-white px-4 lg:px-0'>
 
+            <h2 className='lg:text-[48px] text-2xl font-[950] text-center '>CÓMO EMPEZAR A INVERTIR</h2>
 
             {/* Card Component */}
 
-            <div className='w-[1000px] mx-auto mt-28'>
+            <div className='lg:max-w-[1000px] mx-auto lg:mt-20 mt-20'>
                 <Image
                     src={upperArrow}
                     alt='Upper Arrow'
-                    className='ml-[500px]'
+                    className='ml-[500px] hidden lg:block'
                     width={350}
                 />
-
-                <div className='flex justify-center gap-10 text-center'>
-                    <div className='w-[330px] border-[1px] border-[#4FE0B6] rounded-xl px-6 py-5 flex flex-col items-center'>
-                        <Image
-                            src={one}
-                            alt='one'
-                            className='mb-5 mt-3'
-                        />
-                        <h4 className='text-xl'>Completá el formulario de contacto.</h4>
-                        <p className='text-xs mt-2'>Llená algunos datos para que podamos contactarte.</p>
-                    </div>
-
-                    <div className='w-[330px] border-[1px] border-[#4FE0B6] rounded-xl px-6 py-5 flex flex-col items-center'>
-                        <Image
-                            src={two}
-                            alt='one'
-                            className='mb-5 mt-3 '
-                        />
-                        <h4 className='text-xl'>Respondé algunas preguntas.</h4>
-                        <p className='text-xs mt-2'>Necesitamos saber tus objetivos , y tu perfíl como inversor.</p>
-                    </div>
-
-                    <div className='w-[330px] border-[1px] border-[#4FE0B6] rounded-xl px-6 py-5 flex flex-col items-center'>
-                        <Image
-                            src={three}
-                            alt='one'
-                            className='mb-5 mt-3'
-                        />
-                        <h4 className='text-xl'>Empezá a invertir.</h4>
-                        <p className='text-xs mt-2'>Crearemos un plan de inversión automático basado en tu perfil.</p>
-                    </div>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
+                    <InvestCard
+                        label={1}
+                        title='Completá el formulario de contacto.'
+                        subTitle='Llená algunos datos para que podamos contactarte.'
+                    />
+                    <InvestCard
+                        label={2}
+                        title='Respondé algunas preguntas.'
+                        subTitle='Necesitamos saber tus objetivos , y tu perfíl como inversor.'
+                    />
+                    <InvestCard
+                        label={3}
+                        title='Empezá a invertir.'
+                        subTitle='Crearemos un plan de inversión automático basado en tu perfil.'
+                    />
 
                 </div>
-
                 <Image
                     src={lowerArrow}
                     alt='lower Arrow'
-                    className='ml-40'
+                    className='ml-40 hidden lg:block'
                     width={350}
                 />
             </div>
 
-            <div className=' w-[400px] mx-auto mt-24'>
+            <div className=' lg:max-w-[500px] w-full mx-auto lg:mt-24 mt-12'>
                 <button
-                    className=' text-white bg-[#00BCC1] text-[32px] font-[900] w-full  lg:py-2 py-2 rounded-md hover:bg-transparent border-[1px] border-[#00BCC1]'
+                    className=' text-white bg-[#00BCC1] lg:text-2xl text-xl font-[700] w-full  lg:py-2 py-2 rounded-md hover:bg-transparent border-[1px] border-[#00BCC1]'
                 >Empezá a invertir</button>
             </div>
         </div>

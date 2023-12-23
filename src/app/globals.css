@@ -49,32 +49,47 @@ h4 {
   background-position: center;
 }
 
-.heroEffect2 {
+/* .heroEffect2 {
   display: block;
   margin-left: auto;
   margin-top: -450px;
-}
+} */
 
 .startInvestBg {
   background-image: url(../../public/images/startInvestingBg.png);
   background-position: center;
 }
 
+.investCard {
+  background: linear-gradient(258deg,
+      rgba(79, 224, 190, 0) 14.63%,
+      rgba(79, 224, 182, 0.08) 56.32%,
+      rgba(79, 224, 182, 0.06) 65.36%,
+      rgba(217, 217, 217, 0) 109.44%);
+  @apply relative overflow-hidden px-5 py-5 border border-[#4FE0B6] rounded-lg;
+}
+
+.textStroke{
+  -webkit-text-stroke: 2px #4fe0b6;
+  -webkit-text-fill-color: transparent;
+}
+
 .aboutCard {
   position: relative;
 }
+
 .aboutCard::before {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 20px; 
-  padding: 5px; 
-  background:linear-gradient(45deg,#4FE0B6, #1D70B7, #44B9BE); 
-  -webkit-mask: 
-     linear-gradient(#fff 0 0) content-box, 
-     linear-gradient(#fff 0 0);
+  border-radius: 20px;
+  padding: 5px;
+  background: linear-gradient(45deg, #4FE0B6, #1D70B7, #44B9BE);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
-          mask-composite: exclude; 
+  mask-composite: exclude;
 }
 
 

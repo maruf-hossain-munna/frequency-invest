@@ -10,7 +10,7 @@ import Blog from './components/Blog'
 
 export default function Home() {
   return (
-    <div>
+    <div className='bg-[#030A15]'>
       <Navbar />
       <HeroArea />
       <StartInvesting />
